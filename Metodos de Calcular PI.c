@@ -23,6 +23,7 @@ int metodos_series_infinitas(){
 	printf("1 - Metodo de John Wallis");
 	printf("\n2 - Metodo de Francois Viete");
 	printf("\n3 - Metodo de Leibniz/Taylor");
+	printf("\n4 - Metodo de Newton-Rhapson");
 	
 	opc_metodo = get_opc();
 	
@@ -35,6 +36,9 @@ int metodos_series_infinitas(){
 			break;
 		case 3:
 			leibniz_taylor();
+			break;
+		case 4:
+			newton_rhapson();
 			break;
 		default:
 			printf("ERRO");
@@ -153,6 +157,27 @@ int john_wallis(){
 		}
 		
 	}
+	
+	return 0;
+	
+}
+
+int newton_rhapson(){
+	
+	printf("\n=============== Series infinitas - Newton-Rhapson ===============");
+	
+	int aux;
+	int qtdInt = get_qtd_int();
+	
+	double x0 = 0.57079632679489661923;
+	
+	for(aux=1; aux<=qtdInt; aux++){
+	
+	   x0 = x0 - sin(x0)/cos(x0);
+	   
+ 	   printf("%.20lf\n", x0);
+ 	   
+    }
 	
 	return 0;
 	
