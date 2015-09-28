@@ -15,6 +15,8 @@ Métodos de séries infinitas
 	Método de Leibniz/Taylor
 
 	Método de Johann Heinrich Lambert
+	
+	Metodo de Newton-Rhapson
 
 Métodos de cálculo numérico
 
